@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap");
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  text-align: center;
+  font-size: 6rem;
+  background: linear-gradient(to right, #111, #222);
+}
+
+.container {
+  width: max-content;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  padding: 0 10px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container > * {
+  background-image: linear-gradient(to right, #c31432, #f12711, #f5af19);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* reflection effect */
+.container > :last-child {
+  transform: rotateX(180deg) translateY(5px);
+  -webkit-mask-image: repeating-linear-gradient(
+      transparent,
+      transparent 3px,
+      #fff 3px,
+      #fff 4px
+    ),
+    linear-gradient(transparent 50%, #fff 90%);
+  mask-image: repeating-linear-gradient(
+      transparent,
+      transparent 3px,
+      #fff 3px,
+      #fff 4px
+    ),
+    linear-gradient(transparent 50%, #fff 90%);
+  margin-top: -40px;
+}
